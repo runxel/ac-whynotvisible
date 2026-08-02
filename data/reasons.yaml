@@ -22,7 +22,7 @@
     en: Layouts can't have Layer Combinations assigned, use the Archicad-Layer instead.
 
 - id: psd
-  elements: ["*", "!fill"]
+  elements: ["*", "!fill", "!marker-wido"]
   views: [2d, 3d, section, elevation, export]
   rating: 3
   title:
@@ -56,7 +56,7 @@
 
 - id: do-passive
   elements: ["*"]
-  views: ["*", "!export"]
+  views: ["*", "!export", "!marker-wido"]
   rating: 6
   title:
     de: Passive Variante mit Einfärbung
@@ -77,7 +77,7 @@
     en: Check "Show on Stories" in the element settings.
 
 - id: section-depth
-  elements: "*"
+  elements: ["*", "!marker-wido"]
   views: [section, elevation, interior-elev]
   rating: 5
   title:
@@ -174,7 +174,7 @@
     en: The hierarchical tools (Curtain Walls, Stairs, Railings) have their own highly detailed settings in the MVO, which can specifically affect the sub-components and their visibility. For Stairs, a distinction must also be made in the floor plan between the normal symbolic representation and a reflected ceiling plan display.
 
 - id: 3d-filter
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: "3d"
   rating: 5
   title:
@@ -185,7 +185,7 @@
     en: 'With the command "Filter and Cut Elements in 3D" the view can be limited to a certain story or story range as well to certain element types. There is no visible way to determine if this filter is active. In the default setting Zones are not visible in 3D. This setting is saved with the view.'
 
 - id: marching-ants
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: "3d"
   rating: 4
   title:
@@ -196,7 +196,7 @@
     en: 'There is an active marquee which cuts the 3D view. This option can be deactivated in the "Filter and Cut Elements in 3D" dialog, as well as switched from "show inside" to "show outside".'
 
 - id: 3d-cut
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: 3d
   rating: 7
   title:
@@ -207,7 +207,7 @@
     en: A 3D cutaway is active in the 3D window, limiting what is displayed. The cutting planes (shown in purple) can be hidden, so the only indication of an active 3D cut might be an eye icon located at the top of the screen.
 
 - id: fpcp
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: 2d
   rating: 5
   title:
@@ -218,7 +218,7 @@
     en: Check the current settings of the Floor Plan Cut Plane dialog.
 
 - id: elemsett-plan
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: 2d
   rating: 6
   title:
@@ -229,7 +229,7 @@
     en: Check the floor plan display settings of the element, possible in conjunction with the settings of the FPCP.
 
 - id: issue
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: "*"
   rating: 8
   title:
@@ -319,7 +319,7 @@
     en: In certain configurations (e.g. the pen matches the drawing background and there is no outline), a fill may become invisible.
 
 - id: section-depth-zero
-  elements: ["*", "!fill"]
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: [elevation, section]
   rating: 3
   title:
@@ -330,7 +330,7 @@
     en: The depth or height of a Section / Elevation is not large enough.
 
 - id: ifc-model
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: export
   rating: 5
   title:
@@ -341,7 +341,7 @@
     en: Check model filter in IFC settings.
 
 - id: story
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: 2d
   rating: 2
   title:
@@ -429,7 +429,7 @@
     en: The element is completely cut away by another element with a stronger Building Material.
   
 - id: seo
-  elements: "*"
+  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
   views: [3d, section, elevation, interior-elev]
   rating: 6
   title:

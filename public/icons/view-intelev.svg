@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <style>
+    	:root { --ink: #263238; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; }
+    	}
+    </style>
+    <g id="Int-Elev">
+        <path d="M19.499,18.5C20.051,18.5 20.499,18.052 20.499,17.5C20.499,14.923 20.499,8.077 20.499,5.5C20.499,4.948 20.051,4.5 19.499,4.5C16.485,4.5 7.514,4.5 4.5,4.5C3.948,4.5 3.5,4.948 3.5,5.5C3.5,8.077 3.5,14.923 3.5,17.5C3.5,18.052 3.948,18.5 4.5,18.5C7.514,18.5 16.485,18.5 19.499,18.5Z" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M6.5,8.5L10.499,8.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M13.5,8.5L17.499,8.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M13.5,12.5L17.499,12.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M6.5,8.5L6.5,18.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M10.5,8.5L10.5,18.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M13.5,8.5L13.5,12.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M17.5,8.5L17.5,12.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

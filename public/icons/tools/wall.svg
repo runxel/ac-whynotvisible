@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <path id="Wall" d="M4.5,7.164C4.5,6.864 4.8,6.665 5,6.665L19.1,5.268C19.4,5.268 19.5,5.367 19.5,5.667L19.5,14.649C19.5,14.949 19.3,15.148 19.1,15.248L4.9,19.241C4.7,19.341 4.5,19.141 4.5,18.941L4.5,7.164Z" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; --paper-shade: #f1f1f1; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; --paper-shade: #262b32; }
+    	}
+    </style>
+    <g id="Column">
+        <path d="M14.5,5.5L14,17.5C13.9,18.399 13.3,19.5 12,19.5C10.7,19.5 10.1,18.399 10,17.5L9.5,5.5" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M9.5,5.5C9.5,4.7 10.9,4.5 12,4.5C13.3,4.5 14.5,4.7 14.5,5.5C14.5,6.3 13,6.5 12,6.5C10.7,6.5 9.5,6.2 9.5,5.5" style="fill:var(--paper-shade);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;"/>
+    </g>
+</svg>

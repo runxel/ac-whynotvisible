@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Zone">
+        <path d="M12.447,6.492L12.447,5.897C12.447,5.698 12.646,5.5 12.944,5.5L15.03,5.5C15.328,5.5 15.526,5.698 15.526,5.996L15.526,10.065C15.526,10.362 15.725,10.561 16.023,10.561L19.003,10.561C19.301,10.561 19.5,10.759 19.5,11.057L19.5,18.003C19.5,18.301 19.301,18.5 19.003,18.5L15.924,18.5C15.626,18.5 15.427,18.301 15.427,18.003L15.427,17.011C15.427,16.713 15.228,16.515 14.93,16.515L7.977,16.515C7.679,16.515 7.48,16.713 7.48,17.011L7.48,18.003C7.48,18.301 7.281,18.5 6.983,18.5L4.997,18.5C4.699,18.5 4.5,18.301 4.5,18.003L4.5,5.996C4.5,5.698 4.699,5.5 4.997,5.5L6.983,5.5C7.281,5.5 7.48,5.698 7.48,5.897C7.48,6.095 7.679,6.492 7.977,6.492L12.447,6.492" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.473,10.462C10.46,10.462 12.447,9.47 12.447,6.492" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.473,6.492L8.473,10.461" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M9.467,14.43L14.434,14.43" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M9.467,12.446L14.434,12.446" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

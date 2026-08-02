@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Stair">
+        <path d="M11,17L11,14L8.5,13L8.5,10.5L5,9L11,8L14,9L14,11L17,12L17,14.5L20,15.5L14,18L11,17Z" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.5,10.5L14,9" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M17,14.5L11,17" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M14,11L8.5,13" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M11,14L17,12" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

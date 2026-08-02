@@ -1,0 +1,19 @@
+{
+    "name": "ac-whynotvisible",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "description": "Interactive diagnostic webpage: Why don't I see that in this Archicad view?",
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run validate && tsc --noEmit && vite build",
+        "preview": "vite preview",
+        "validate": "node scripts/validate-data.mjs",
+        "theme-icons": "node scripts/theme-icons.mjs"
+    },
+    "devDependencies": {
+        "@modyfi/vite-plugin-yaml": "^1.1.0",
+        "typescript": "^5.6.3",
+        "vite": "^6.0.5"
+    }
+}

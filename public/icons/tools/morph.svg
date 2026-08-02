@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Morph">
+        <path d="M12.522,19.551C12.522,19.551 9.234,7.251 15.511,5.051C14.216,4.551 12.323,4.751 11.027,5.351C5.547,7.551 5.348,12.851 5.547,16.551L12.522,19.551Z" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M12.522,19.551C12.522,19.551 13.219,15.551 18.5,13.551C18.5,13.551 16.408,10.951 15.81,8.851C15.511,7.851 15.511,5.051 15.511,5.051" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

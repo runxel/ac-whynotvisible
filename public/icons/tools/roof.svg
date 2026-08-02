@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Roof">
+        <path d="M10.421,16.5L15.849,7.5L7.46,7.5L4.5,12.5L10.421,16.5Z" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M16.046,7.5L19.5,13.1L13.579,12.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Window">
+        <path d="M5.5,6.498C5.5,6.198 5.8,5.999 6,5.999L18,5C18.3,5 18.5,5.2 18.5,5.5L18.5,14.486C18.5,14.786 18.3,14.885 18,14.985L6,17.981C5.7,18.081 5.5,17.781 5.5,17.482L5.5,6.498Z" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M12.5,15.983L12.5,5.999" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M5.5,11.989L18.5,9.993" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

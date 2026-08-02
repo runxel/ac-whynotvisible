@@ -1,0 +1,30 @@
+<svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="WiDo-Marker">
+        <path d="M5.325,8.5L5.325,18.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M12,6.5L12,19" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1.3px;stroke-linecap:butt;"/>
+        <path d="M18.5,8.5L18.5,18.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M18.5,18.5L22.825,18.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M18.5,8.5L22.825,8.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M1,18.5L5.325,18.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M1,8.5L5.325,8.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M10,8.5L7,8.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;"/>
+        <path d="M10,10.5L7,10.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;"/>
+        <path d="M9.5,18L9.5,21" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;"/>
+        <path d="M14.5,18L14.5,21" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;"/>
+        <path d="M17,8.5L14,8.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;"/>
+        <path d="M17,10.5L14,10.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-linecap:butt;"/>
+        <path d="M1.281,12L4.782,8.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M1.281,16L5.281,12" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M2.281,18.5L5.281,15.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M22.5,12L19,8.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M22.5,16L18.5,12" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M21.5,18.5L18.5,15.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <circle cx="12" cy="4" r="2" style="fill:var(--paper);stroke:var(--ink);stroke-width:1.2px;stroke-linecap:butt;stroke-miterlimit:1.5;"/>
+    </g>
+</svg>

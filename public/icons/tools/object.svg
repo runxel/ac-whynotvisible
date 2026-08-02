@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Object">
+        <path d="M17.5,12L17.5,17" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M11.5,19L11.5,14" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M11.5,11L6.5,12.2L11.5,14L17.5,12L11.5,11Z" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M11.5,5L11.5,11" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M6.5,6L11.5,5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M6.5,17L6.5,6" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

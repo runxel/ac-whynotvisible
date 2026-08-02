@@ -1,0 +1,61 @@
+# ELEMENTS – the "what"
+#   id    : unique key, is referenced by `reasons.yaml`
+#   icon  : filename in 'public/icons/tools/'
+#   label : display name, inline translation
+- id: wall
+  icon: wall.svg
+  label: { de: Wand, en: Wall }
+- id: column
+  icon: column.svg
+  label: { de: Stütze, en: Column }
+- id: beam
+  icon: beam.svg
+  label: { de: Träger, en: Beam }
+- id: slab
+  icon: slab.svg
+  label: { de: Decke, en: Slab }
+- id: roof
+  icon: roof.svg
+  label: { de: Dach, en: Roof }
+- id: shell
+  icon: shell.svg
+  label: { de: Schale, en: Shell }
+- id: morph
+  icon: morph.svg
+  label: { de: Morph, en: Morph }
+- id: object
+  icon: object.svg
+  label: { de: Objekt, en: Object }
+- id: window
+  icon: window.svg
+  label: { de: Fenster, en: Window }
+- id: door
+  icon: door.svg
+  label: { de: Tür, en: Door }
+- id: opening
+  icon: opening.svg
+  label: { de: Öffnung, en: Opening }
+- id: stair
+  icon: stair.svg
+  label: { de: Treppen, en: Stair }
+- id: railing
+  icon: railing.svg
+  label: { de: Geländer, en: Railing }
+- id: cw
+  icon: cw.svg
+  label: { de: Fassade, en: Curtain Wall }
+- id: fill
+  icon: fill.svg
+  label: { de: Schraffur, en: Fill }
+- id: label
+  icon: label.svg
+  label: { de: Etikett, en: Label }
+- id: dim
+  icon: dim.svg
+  label: { de: Bemaßung, en: Dimension }
+- id: marker-wido
+  icon: marker-wido.svg
+  label: { de: Fenster-/Tür-Marker, en: Window/Door Marker }
+- id: marker-change
+  icon: marker-change.svg
+  label: { de: Änderungsmarker, en: Change Marker }

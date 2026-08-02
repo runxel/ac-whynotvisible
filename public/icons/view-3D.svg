@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <style>
+    	:root { --ink: #263238; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; }
+    	}
+    </style>
+    <g id="_3D">
+        <path d="M4.5,8L4.5,17.906" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M15.5,9.862L15.5,19.851" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M19.5,5.796L19.5,15.862" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M15.5,19.862L19.5,15.862" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M15.5,9.862L19.5,5.862" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M4.5,7.862L8.5,3.862" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M4.528,17.917L15.5,19.851" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M4.528,7.917L15.5,9.851" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.528,3.862L19.5,5.796" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

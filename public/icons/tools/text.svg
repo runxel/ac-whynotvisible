@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; }
+    	}
+    </style>
+    <g id="Text">
+        <path d="M17.5,17.5L12.9,7.322C12.4,6.226 11.6,6.226 11.1,7.322L6.5,17.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M7.886,14.507L16.007,14.507" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+# UI
+# static UI texts, inline translation
+title:
+  de: "Warum sehe ich das nicht in Archicad?"
+  en: "Why can't I see this in Archicad?"
+subtitle:
+  de: Wähle Element und Sicht – die wahrscheinlichsten Ursachen werden unten angezeigt.
+  en: Pick an element and a view – the most likely causes will be shown below.
+what_label: { de: "Was?", en: "What?" }
+view_label: { de: "Sicht?", en: "View?" }
+what_placeholder: { de: "Elementtyp wählen oder tippen…", en: "Choose or type an element type…" }
+view_placeholder: { de: "Sicht wählen oder tippen…", en: "Choose or type a view…" }
+results_heading: { de: "Mögliche Ursachen", en: "Possible causes" }
+empty_hint: { de: "Bitte eine Auswahl treffen", en: "Please select" }
+no_results: { de: "Keine bekannten Ursachen für diese Kombination.", en: "No known causes for this combination." }
+toggle_aria: { de: "Liste öffnen", en: "Open list" }

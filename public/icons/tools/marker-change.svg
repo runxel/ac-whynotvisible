@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; }
+    	}
+    </style>
+    <g id="Change">
+        <path d="M12.5,18.951L12.5,14.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.5,9.5L8.5,18.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M12.5,14.5L18.825,14.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M18.158,9.5L8.5,9.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.5,12.5L11.5,9.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M8.5,16.5L15.5,9.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M9.9,19.299L12.5,16.499" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M14.5,14.5L18.5,10.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M15.4,8.399C17.8,8.399 19.5,10.199 19.5,12.5C19.5,14.799 17.6,16.699 15.4,16.699C14.8,18.399 13,19.5 11.1,19.5C8.5,19.5 6.5,17.5 6.5,15C5.3,14.599 4.5,13.299 4.5,11.799C4.5,9.899 5.8,8.5 7.5,8.5C7.8,8.5 8.3,8.599 8.6,8.699C8.7,6.799 10.2,5.5 12,5.5C13.7,5.5 15.2,6.799 15.4,8.399" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

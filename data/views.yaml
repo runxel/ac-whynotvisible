@@ -1,0 +1,32 @@
+# VIEWS
+#   id    : unique name, is referenced in "reasons.yaml"
+#   icon  : file name in "public/icons/"
+#   label : display name with inline translation
+# ------- #
+- id: 2d
+  icon: view-2D.svg
+  label: { de: Grundriss (2D), en: Floor Plan (2D) }
+- id: 3d
+  icon: view-3D.svg
+  label: { de: 3D, en: 3D }
+- id: section
+  icon: view-section.svg
+  label: { de: Schnitt, en: Section }
+- id: elevation
+  icon: view-elevation.svg
+  label: { de: Ansicht, en: Elevation }
+- id: interior-elev
+  icon: view-intelev.svg
+  label: { de: Innenansicht, en: Interior Elevation }
+- id: detail
+  icon: view-detail.svg
+  label: { de: Detail, en: Detail }
+- id: worksheet
+  icon: view-worksheet.svg
+  label: { de: Arbeitsblatt, en: Worksheet }
+- id: layout
+  icon: view-layout.svg
+  label: { de: Layout, en: Layout }
+- id: export
+  icon: view-export.svg
+  label: { de: Export (PDF/IFC/DWG usw.), en: Export (PDF/IFC/DWG etc.) }

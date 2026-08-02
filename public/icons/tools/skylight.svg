@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;">
+    <style>
+    	:root { --ink: #263238; --ink-soft: #92989b; --paper: #fafafa; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; --ink-soft: #7f8894; --paper: #1e2127; }
+    	}
+    </style>
+    <g id="Skylight">
+        <path d="M9.1,12.967L4.5,11.768L7.4,11.068" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink-soft);stroke-width:1px;"/>
+        <path d="M19.5,14.768L17.5,12.768" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M7.4,11.068L11,10.268L19.5,11.768L13,14.268L9.1,12.968" style="fill:var(--paper);fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M15.5,10.768L11.5,6.768L5.5,7.768L12.5,17.768L19.5,14.768" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;"/>
+    </g>
+</svg>

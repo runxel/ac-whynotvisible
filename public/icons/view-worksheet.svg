@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <style>
+    	:root { --ink: #263238; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --ink: #c8d1d9; }
+    	}
+    </style>
+    <g id="Worksheet">
+        <path d="M9.5,16.5L18.499,16.5" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M15.499,4.5C15.499,4.5 7.097,4.5 4.5,4.5C3.948,4.5 3.5,4.948 3.5,5.5C3.5,8.077 3.5,14.924 3.5,17.501C3.5,17.768 3.607,18.024 3.796,18.211C3.986,18.399 4.243,18.503 4.51,18.501C7.624,18.5 17.03,18.5 19.754,18.5C20.191,18.384 20.496,17.989 20.496,17.536C20.499,15.494 20.498,9.494 20.498,9.494" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M11.233,9.233L12.427,10.427" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M11.979,8.253C12.331,7.902 12.9,7.902 13.252,8.253C13.281,8.283 13.311,8.312 13.34,8.342C13.704,8.706 13.704,9.296 13.34,9.66C11.895,11.105 8.464,14.536 7.04,15.96C6.689,16.311 6.119,16.311 5.767,15.96C5.73,15.923 5.693,15.886 5.656,15.849C5.305,15.497 5.305,14.927 5.656,14.576C7.088,13.144 10.548,9.685 11.979,8.253Z" style="fill:none;stroke:var(--ink);stroke-width:1px;"/>
+        <path d="M20.499,9.494C20.497,8.792 20.199,8.399 19.799,8L16.999,5.099C16.699,4.699 16.199,4.5 15.899,4.5L15.499,4.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-miterlimit:10;"/>
+        <path d="M20.499,9.5C20.499,9.1 20.099,8.5 19.599,8.5L17.599,8.5C17.099,8.5 16.499,8 16.499,7.5L16.499,5.5C16.499,5 15.799,4.5 15.399,4.5" style="fill:none;fill-rule:nonzero;stroke:var(--ink);stroke-width:1px;stroke-miterlimit:10;"/>
+    </g>
+</svg>

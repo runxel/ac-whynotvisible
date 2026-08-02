@@ -1,0 +1,484 @@
+# Possible Reasons why something's not visible
+#
+# Fields:
+#   id       : unique ID, no space, all lowercase
+#   elements : List of element IDs from elements.yaml; "*" for all types, exclusion with "!..."
+#   views    : List of view IDs from views.yaml;       "*" for all types, exclusion with "!..."
+#              (exclusions always win)
+#   rating   : 1–10; higher = more likely -> also determines order of appearance
+#   title    : header
+#   comment  : long explanation and/or additional comments
+# ---------- #
+
+- id: layer-hidden
+  elements: ["*", "!marker-wido"]
+  views: "*"
+  rating: 10
+  title:
+    de: Ebene ausgeblendet
+    en: Layer hidden
+  comment:
+    de: Layout kann keine Ebenenkombinationen speichern, stattdessen am besten die Archicad-Ebene nutzen.
+    en: Layouts can't have Layer Combinations assigned, use the Archicad-Layer instead.
+
+- id: psd
+  elements: ["*", "!fill"]
+  views: [2d, 3d, section, elevation, export]
+  rating: 3
+  title:
+    de: Strukturdarstellung
+    en: Partial Structure Display
+  comment:
+    de: Besonders Bemaßungen sind betroffen, da diese die fest einer Strukturdarstellung zugeordnet sind, welche später nicht geändert werden kann. Die Zuordnung bei Bauelementen bestimmt sich vor allem durch den Schichttyp bei Mehrschichten Bauteilen. Auch Objekte können auf die Strukturdarstellung reagieren, auch wenn das in der Praxis eher selten vorkommt.
+    en: Dimensions are particularly affected, as they are permanently assigned to a Partial Structure Display that cannot be changed later. For construction elements, the assignment is primarily determined by the skin type in multi-layered components. Objects can also react to the partial structure display, although this is quite rare in practice.
+
+- id: reno
+  elements: "*"
+  views: ["*", "!interior-elev", "!layout"]
+  rating: 6
+  title:
+    de: Umbau-Filter blendet das Element aus
+    en: Renovation filter hides the element
+  comment:
+    de: "Aktuellen Umbau-Filter und den Umbau-Status des Elements (Bestand/Abbruch/Neu) prüfen; bei gehosteten Elementen auch den des Host-Elements (z.B. Fenster vs Wand). Auch gefährdet: Angepinnte Elemente, die so zwangsweise in nur einem bestimmten Umbau-Filter zu sehen sind."
+    en: Check the Renovation Filter and the element's status (Existing/Demolished/New). Hosted elements inherit the reno status of their host (e.g. wall in that a window is inserted into). Also check if elements are pinned to a disitinct reno filter.
+
+- id: do
+  elements: ["*", "!marker-wido"]
+  views: "*"
+  rating: 5
+  title:
+    de: Variante ausgeblendet
+    en: Design Option hidden
+  comment:
+    de: Das Element ist einer ausgeblendeten Variante zugeordnet. Je Variantenset kann nur eine Variante sichtbar sein.
+    en: The assigned Design Option is hidden. Only one DO can be visible from each group. The main model is always visible.
+
+- id: do-passive
+  elements: ["*"]
+  views: ["*", "!export"]
+  rating: 6
+  title:
+    de: Passive Variante mit Einfärbung
+    en: Design Option is inactive + faded environment
+  comment:
+    de: Element ist einer sichtbaren, aber nicht aktiven (Bleistiftsymbol) Variante zugeordnet, die Option "Passive Elemente einfärben" ist eingeschaltet, der Transparenz-Schieberegler jedoch maximal (ganz links).
+    en: The element is assigned to a visible but inactive (pencil icon) Design Option, the "Fade Environment" option is turned on, but the transparency slider is at its maximum (all the way to the left).
+
+- id: wrong-story
+  elements: [wall, column, slab, object]
+  views: [2d]
+  rating: 8
+  title:
+    de: Element liegt auf einem anderen Geschoss
+    en: Element is on a different story
+  comment:
+    de: Grundrissdarstellung > „Auf Geschoss zeigen" in den Element-Einstellungen prüfen.
+    en: Check "Show on Stories" in the element settings.
+
+- id: section-depth
+  elements: "*"
+  views: [section, elevation, interior-elev]
+  rating: 5
+  title:
+    de: Schnitt-/Ansichtstiefe begrenzt
+    en: Section/elevation depth is limited
+  comment:
+    de: Schnitt-Einstellungen → „Begrenzt"/Tiefe prüfen; das Element liegt evtl. hinter der Begrenzung.
+    en: Section settings → check "Limited" depth; the element may lie behind the boundary.
+
+- id: cut-plane
+  elements: [wall, column, object]
+  views: [2d]
+  rating: 6
+  title:
+    de: Element über/unter der Grundriss-Schnittebene
+    en: Element above/below the floor plan cut plane
+  comment:
+    de: Dokument → Grundriss-Schnittebene anpassen. Sehr hohe/tiefe Elemente werden sonst nicht geschnitten.
+    en: Document → Floor Plan Cut Plane. Very tall/low elements may not be cut otherwise.
+
+- id: mvo-elementtype
+  elements: "*"
+  views: [2d, section, elevation]
+  rating: 5
+  title:
+    de: Modellansichts-Optionen blenden den Elementtyp aus
+    en: Model View Options hide this element type
+  comment:
+    de: Dokument → Modellansichts-Optionen prüfen (z.B. Schraffuren/Bemaßungen/Bauteile deaktiviert).
+    en: Document → Model View Options (e.g. fills/dimensions/components turned off).
+
+- id: display-order
+  elements: [fill, object]
+  views: [2d]
+  rating: 2
+  title: { de: Element wird von einer Füllung/anderem Element verdeckt, en: Element is covered by a fill/another element }
+  comment:
+    de: Darstellungsreihenfolge prüfen und Element in den Vordergrund bringen.
+    en: Check display order and bring the element to front.
+
+- id: disabled-in-wido
+  elements: [marker-wido]
+  views: [2d]
+  rating: 1
+  title:
+    de: Marker deaktiviert
+    en: Marker deactivated
+  comment:
+    de: 'Der Marker ist in den Tür-/Fenstereinstellungen deaktiviert ("Kein Marker" ausgewählt.)'
+    en: The marker is set to "No Marker" in the Door/Window settings.
+
+- id: marker-disabled-in-reno
+  elements: [marker-wido]
+  views: [2d]
+  rating: 9
+  title:
+    de: In den Umbau-Filter-Optionen ausgeblendet (Nur Bestand oder Abbruch)
+    en: Deactivated in Renovation Options (Existing and TBD only)
+  comment:
+    de: Die sog. Bemaßungsmarker von (Dach-)Fenstern und Türen können über den Umbau-Filter ausgeblendet werden. Das ist vor allem bei Abbruchelementen sinnvoll.
+    en: The markers of Windows and Doors can be hidden in the Renovation Filter.
+
+- id: objects-hidden-in-reno
+  elements: object
+  views: "*"
+  rating: 8
+  title:
+    de: In den Umbau-Filter-Optionen ausgeblendet (Nur Abbruch)
+    en: Hidden in the Renovation Filter (TBD only)
+  comment:
+    de: 'Speziell für Abbruchobjekte kann eine Ausblendung innerhalb des Filterdialogs vorgenommen werden, sodass zwar Abbruchelemente sichtbar sind, Elemente im Sinne des Archicadtyps "Objekt" jedoch nicht.'
+    en: 'There is a special option inside the Reno Filter for TBD elements of the Archicad type "object". These can be hidden.'
+
+- id: mvo-widoop-hidden
+  elements: [window, door, opening]
+  views: ["*", "!export"]
+  rating: 6
+  title:
+    de: In Modelldarstellung ausgeblendet
+    en: Hidden in MVO
+  comment:
+    de: In der Modelldarstellung können Fenster, Türen und Öffnungen wahlweise nur als Öffnung oder im Grundriss sogar gleich ganz ausgeblendet werden (sprich inkl. "Verschließen" der Öffnung).
+    en: Doors, Windows, and Openings can be hidden by the Model View Options, so that even the opening itself does not exist and the Wall appears closed.
+
+- id: mvo-stairs-rails-cw
+  elements: [stair, railing, cw]
+  views: "*"
+  rating: 5
+  title:
+    de: Modelldarstellung detaillierte Optionen
+    en: Detailed MVO
+  comment:
+    de: Die hierarchischen Tools (Fassaden, Treppen, Geländer) haben in der MVO eigene, sehr detaillierte Einstellungen, die sich insbesondere auf die Teilkomponenten und deren Sichtbarkeit auswirken können. Bei Treppen ist zusätzlich im Grundriss die Darstellung zwischen der normalen symbolischen Darstellung, und einer Deckenspiegel-Anzeige zu unterscheiden.
+    en: The hierarchical tools (Curtain Walls, Stairs, Railings) have their own highly detailed settings in the MVO, which can specifically affect the sub-components and their visibility. For Stairs, a distinction must also be made in the floor plan between the normal symbolic representation and a reflected ceiling plan display.
+
+- id: 3d-filter
+  elements: "*"
+  views: "3d"
+  rating: 5
+  title:
+    de: Elemente in 3D filtern und schneiden
+    en: Filter and Cut Elements in 3D
+  comment:
+    de: 'Über den Menübefehl "Elemente in 3D filtern und schneiden" kann die Ansicht im 3D auf bestimmte Geschosse und/oder auf bestimmte Elementtypen reduziert werden. Es gibt keinen Hinweis darauf, dass eine Filterung stattfindet. In der Standardeinstellung von Archicad werden so z.B. Räume grundsätzlich nicht angezeigt. Die Auswahl eines eigentlich gefilterten Elements im Grundriss mit der anschl. Anzeige durch den Shortcut `ctrl +  3` zeigt diese dann jedoch trotzdem an. Diese Einstellung wird in Ausschnitten mitgespeichert.'
+    en: 'With the command "Filter and Cut Elements in 3D" the view can be limited to a certain story or story range as well to certain element types. There is no visible way to determine if this filter is active. In the default setting Zones are not visible in 3D. This setting is saved with the view.'
+
+- id: marching-ants
+  elements: "*"
+  views: "3d"
+  rating: 4
+  title:
+    de: Markierungsrahmen aktiv
+    en: Active Marquee
+  comment: 
+    de: 'Der Markierungsrahmen war beim Wechsel ins 3D aktiv, und begrenzt so das Angezeigte. Diese Einstellung wird in Ausschnitten mitgespeichert. Im Dialog "Elemente in 3D filtern und schneiden" kann zwischen positiver ("nur innerhalb") und negativer ("nur außerhalb") Darstellung gewechselt, sowie die Schnittfunktion auch deaktiviert werden.'
+    en: 'There is an active marquee which cuts the 3D view. This option can be deactivated in the "Filter and Cut Elements in 3D" dialog, as well as switched from "show inside" to "show outside".'
+
+- id: 3d-cut
+  elements: "*"
+  views: 3d
+  rating: 7
+  title:
+    de: 3D-Schnitt aktiv
+    en: Active 3D Cut
+  comment:
+    de: Im 3D-Fenster ist ein 3D-Schnitt aktiv und begrenzt so das Angezeigte. Die Schnittebenen (dargestellt in Lila) können ausgeblendet werden, sodass der einzige Hinweis darauf ein am oberen Bildschirmrand befindliches Augensymbol ist.
+    en: A 3D cutaway is active in the 3D window, limiting what is displayed. The cutting planes (shown in purple) can be hidden, so the only indication of an active 3D cut might be an eye icon located at the top of the screen.
+
+- id: fpcp
+  elements: "*"
+  views: 2d
+  rating: 5
+  title:
+    de: Grundriss-Schnittebene
+    en: Floor Plan Cut Plane
+  comment:
+    de: Die aktuellen Einstellungen der Grundriss-Schnittebene überprüfen.
+    en: Check the current settings of the Floor Plan Cut Plane dialog.
+
+- id: elemsett-plan
+  elements: "*"
+  views: 2d
+  rating: 6
+  title:
+    de: Grundriss-Darstellung des Elements
+    en: Floor plan display (element settings)
+  comment:
+    de: Grundriss-Darstellung als Teil der Elementeinstellungen überprüfen. Eventuell in Verbindung mit den Einstellungen der aktuellen Grundriss-Schnittebene.
+    en: Check the floor plan display settings of the element, possible in conjunction with the settings of the FPCP.
+
+- id: issue
+  elements: "*"
+  views: "*"
+  rating: 8
+  title:
+    de: Teil eines Issues
+    en: Part of an Issue
+  comment:
+    de: 'Das Element ist Teil eines Issues, und in diesem Issue als "neu" gekennzeichnet. Das Issue selbst ist ausgeblendet.'
+    en: 'The element is part of an issue, in which it is marked as "new". The issue itself is hidden.'
+  
+- id: scale
+  elements: object
+  views: "*"
+  rating: 4
+  title:
+    de: Maßstab
+    en: Scale
+  comment:
+    de: Objekte können auf den Maßstab reagieren. Somit ist es möglich, dass in bestimmten Maßstäben Teile oder gar das gesamte Objekt nicht angezeigt werden.
+    en: Objects can react to the current scale. It is possible that for some scales parts of the object or the whole object are not displayed.
+
+- id: hotlink-part
+  elements: "*"
+  views: "*"
+  rating: 8
+  title:
+    de: Bestandteil eines Hotlinks
+    en: Part of a Hotlink
+  comment:
+    de: Das Element ist Teiles eines Hotlinks, welcher noch nicht aktualisiert worden ist.
+    en: The element is part of an hotlink that hasn't been updated yet.
+
+- id: interior-elev-special
+  elements: wall
+  views: interior-elev
+  rating: 9
+  title:
+    de: Innenansichtsoption 'Umgebenen Bereich hinzufügen'
+    en: Interior Elevation setting 'Add Bounded Areas'
+  comment:
+    de: 'Innenansichten verfügen in im Einstellungsdialog über eine besondere Funktion mit dem wenig deskriptiven Namen "Umgebenen Bereich hinzufügen". Ist dieser aktiv, werden bestimmte Wände ausgeblendet; das passiert jedoch teils erratisch.'
+    en: 'Interior Elevations have an ominous checkbox called "Add Bounded Areas" (only available before placing). When active walls are hidden. It is not entirely clear on what basis.'
+  link:
+    https://help.graphisoft.com/AC/29/GER/index.htm?rhcsh=1&rhnewwnd=0#t=_AC29_Help%2F150_UserInterfaceToolSettings%2F150_UserInterfaceToolSettings-34.htm#CSH_2208
+
+- id: changemarker
+  elements: marker-change
+  views: 2d
+  rating: 7
+  title:
+    de: Änderungswolke vergangener Ausgaben
+    en: Change Markers of past Transmittals
+  comment:
+    de: Bei der Ausgabenerstellung steuert eine Checkbox, was mit den Änderungswolken der vergangenen Ausgabe geschehen soll.
+    en: Use the checkbox when generating a new transmittal to determine the 
+
+- id: teamwork
+  elements: "*"
+  views: "*"
+  rating: 9
+  title:
+    de: Teamwork nicht synchron
+    en: Teamwork not synched
+  comment:
+    de: '"Senden und Empfangen" auf beiden Seiten durchführen. Auch das Verlassen des Projekts und das Löschen der lokalen Teamwork-Daten kann helfen, fehlerhafte Synchronisationen zu vermeiden.'
+    en: 'Perform "Send & Receive" at all parties. Leaving the project entirely, then deleting local TW storage before rejoining can help in more severe cases.'
+  
+- id: view-order
+  elements: "*"
+  views: 2d
+  rating: 6
+  title:
+    de: Darstellungsreihenfolge
+    en: View Order
+  comment:
+    de: 'Elemente können über die Darstellungsreihenfolge vollkommen durch andere Elemente verdeckt werden. Die Darstellungsreihenfolge kann auch global über einen Menübefehl "Voreingestelle Reihenfolge wiederherstellen" zurückgesetzt werden.'
+    en: 'Elements can be completely concealed by other elements depending on their respective display order. The display order can also be reset globally using a "Restore default view order" menu command.'
+  
+- id: empty-fill
+  elements: [fill]
+  views: "*"
+  rating: 3
+  title:
+    de: Leere Schraffur
+    en: Empty Fill
+  comment:
+    de: In bestimmten Konstellationen (z.B. Stift entspricht dem Zeichenhintergrund und keine Kontur) kann es dazu kommen, dass eine Schraffur unsichtbar wird.
+    en: In certain configurations (e.g. the pen matches the drawing background and there is no outline), a fill may become invisible.
+
+- id: section-depth-zero
+  elements: ["*", "!fill"]
+  views: [elevation, section]
+  rating: 3
+  title:
+    de: Schnittiefe oder -höhe
+    en: Section depth/-height
+  comment:
+    de: Die Tiefe oder Höhe eines Schnitts / einer Ansicht ist nicht groß genug.
+    en: The depth or height of a Section / Elevation is not large enough.
+
+- id: ifc-model
+  elements: "*"
+  views: export
+  rating: 5
+  title:
+    de: Im IFC-Übersetzer nicht eingestellt
+    en: Not set in the IFC translator
+  comment:
+    de: Abschnitt Modellfilter überprüfen.
+    en: Check model filter in IFC settings.
+
+- id: story
+  elements: "*"
+  views: 2d
+  rating: 2
+  title:
+    de: Geschosszuordnung
+    en: Wrong Story assigned
+  comment:
+    de: Beim Platzieren oder Copy & Paste in anderem Geschoss platziert oder Geschossdarstellung passt nicht, Nachricht dazu kann mit der Checkbox verborgen werden (diese kann über das Menü wieder aktiviert werden).
+    en: When placing or using copy & paste, the element is placed on a different story or the story display itself is incorrect; the corresponding message can be hidden using the checkbox (which can be reactivated via a menu command).
+
+- id: zero-height-wall
+  elements: wall
+  views: [3d, section, elevation, interior-elev]
+  rating: 4
+  title:
+    de: Nullhöhe
+    en: Zero height
+  comment:
+    de: Wand hat eine Nullhöhe. Erkennbar daran, dass im 2D Verschneidungen nicht mehr korrekt funktionieren.
+    en: Wall has a height of zero. Discernible by the fact that in the plan intersections do not seem to work any longer.
+
+- id: zero-height-host
+  elements: [window, door]
+  views: 2d
+  rating: 4
+  title:
+    de: Nullhöhe des Hosts
+    en: Host has zero height
+  comment:
+    de: Die Wand, in der das Fenster / die Tür sitzt, hat eine Nullhöhe.
+    en: The wall which hosts the Window / Door has zero as its height.
+
+- id: duplicated
+  elements: wall
+  views: 3d
+  rating: 6
+  title:
+    de: Element doppelt vorhanden
+    en: Element duplicated in place
+  comment:
+    de: Die Wand ist an Ort und Stelle doppelt vorhanden (vollständig identisch). Dadurch löschen sich die beiden Elemente gegenseitig aus.
+    en: The Wall is duplicated in place (completely identical). They will intersect and cancel out each other.
+
+- id: drawing-not-updated
+  elements: "*"
+  views: layout
+  rating: 3
+  title:
+    de: Ausschnitt/Verknüpfung nicht aktualisiert
+    en: Drawing not updated
+  comment:
+    de: Der Ausschnitt ist nicht aktualisiert. Prüfen, ob in den Zeichnungseinstellungen der Updatemodus auf manuell eingestell ist.
+    en: Check the placed drawing settings if the update mode is set to manual.
+
+- id: glob-context
+  elements: "object"
+  views: "*"
+  rating: 5
+  title:
+    de: Objekt reagiert auf Kontext
+    en: Object reacts to context
+  comment:
+    de: "GDL-Objekte können auf ihren Ausführungskontext reagieren, indem z.B. eine andere Geometrie verwendet wird, wenn das Objekt Teil Für GDL-Tüftler: Früher `GLOB_CONTEXT`, jetzt `GLOB_VIEW_TYPE` / `GLOB_FEEDBACK_MODE` / `GLOB_SEO_TOOL_MODE`"
+    en: GDL objects can react to their context, e.g. use a different geometry when they are part of a SEO action.
+
+- id: graphic-override
+  elements: "*"
+  views: "*"
+  rating: 1
+  title:
+    de: Grafische Überschreibungsregel
+    en: Graphic Override
+  comment:
+    de: Grafische Überschreibungs-Regeln prüfen (z.B. transparent / weiß / kein Stift).
+    en: Check graphic override rules (e.g. transparent / white / no pen).
+
+- id: intersection-bmat
+  elements: ["wall", "beam", "column", "slab"]
+  views: "*"
+  rating: 7
+  title:
+    de: Baustoff-basierte Verschneidung
+    en: Intersection based on Building Material
+  comment:
+    de: Das Element ist komplett durch ein anderes mit stärkerem Baustoff beschnitten (auch ausgeblendete Ebenen oder aus anderen Etagen hereinragend möglich).
+    en: The element is completely cut away by another element with a stronger Building Material.
+  
+- id: seo
+  elements: "*"
+  views: [3d, section, elevation, interior-elev]
+  rating: 6
+  title:
+    de: Element durch SEO beschnitten
+    en: Element cut with SEO
+  comment:
+    de: Durch eine Solid Element Operation wurde das das Element vollständig weggeschnitten.
+    en: A Solid Element Operation led to complete disappereance in 3D.
+
+- id: linked-labels
+  elements: label
+  views: "*"
+  rating: 8
+  title:
+    de: 'Verbundene Etiketten "erben" die Sichtbarkeit des verknüpften Elements'
+    en: Linked Labels inherit visibility of labeled element
+  comment:
+    de: 'Bei verlinkten Etiketten gibt es in den Etiketteneinstellungen ganz unten die Checkbox "Mit assoziertem Element verbergen". Zusätzlich zu den Sichtbarkeitsgründen des Etiketts selbst kann also durch das verlinkte Element eine Ausblendung stattfinden.'
+    en: The option "hide with associated element" (activated by default) at the bottom of the Label settings dialog will make the visibility dependent on the labeled element.
+  
+- id: object-sett-2d-3d
+  elements: object
+  views: [2d, 3d]
+  rating: 4
+  title:
+    de: Darstellung im 2D/3D unterschiedlich
+    en: Different Display in 2D vs 3D
+  comment:
+    de: Objekte können unterschiedliche Einstellungen je nach Sicht aufweisen.
+    en: Depending on the view the Object's settings there can be set different.
+
+- id: wido-2d-projection
+  elements: [window, door]
+  views: 2d
+  rating: 5
+  title:
+    de: "Grundriss projiziert/symbolisch <-> CP Ebene"
+    en: Floor plan projection
+  comment:
+    de: Fenster oder Tür sind auf "Projiziert" / "Projiziert mit Untersicht" eingestellt und die aktuelle Schnittebene schneidet das Element nicht.
+    en: The floor plan projection of the Window/Door is set to "Projected" or "Projected with overhead" and the FPCP does not cut the Window/Door.
+
+- id: morph-proj
+  elements: morph
+  views: 2d
+  rating: 7
+  title:
+    de: Morph-Projektion aus anderem Geschoss
+    en: Morph projection from another story
+  comment:
+    de: 'Die Projektion von Morphs aus anderen Geschossen verhält sich trotz gleicher Einstellungen anders als bei anderen Elementen. Der Trick ist, die generelle Anzeige von Morphs erst einmal auf "alle Geschosse" statt "alle relevante Geschosse" umzustellen, und über den Grundrissbereich die Darstellung zu gewährleisten.'
+    en: 'Projected morphs situated at a different story are behaving differently than other elements. Try to set the floor plan display to "all stories" instead of "all relevant stories". Then use the FPCP to ensure a consistent display.'

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warum sehe ich das nicht in Archicad?</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-header__text">
+        <h1 id="app-title"></h1>
+        <p id="app-subtitle" class="subtitle"></p>
+      </div>
+      <label class="lang-switch">
+        <span class="visually-hidden">Sprache / Language</span>
+        <select id="lang-select">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+      </label>
+    </header>
+
+    <main class="app-main">
+      <div class="selectors">
+        <div class="field">
+          <label id="what-label" for="combo-what-input"></label>
+          <div id="combo-what"></div>
+        </div>
+        <div class="field">
+          <label id="view-label" for="combo-view-input"></label>
+          <div id="combo-view"></div>
+        </div>
+      </div>
+
+      <section class="results" aria-live="polite">
+        <h2 id="results-heading"></h2>
+        <div id="results-body"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

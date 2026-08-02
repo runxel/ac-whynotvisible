@@ -55,8 +55,8 @@
     en: The assigned Design Option is hidden. Only one DO can be visible from each group. The main model is always visible.
 
 - id: do-passive
-  elements: ["*"]
-  views: ["*", "!export", "!marker-wido"]
+  elements: ["*", "!marker-wido"]
+  views: ["*", "!export"]
   rating: 6
   title:
     de: Passive Variante mit Einfärbung

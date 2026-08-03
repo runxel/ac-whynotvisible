@@ -23,11 +23,28 @@
 	}
 }
 
-* {
-	box-sizing: border-box;
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+::-moz-focus-inner {
+	/* disable that focus thing Firefox is doing */
+	border: 0;
+}
+
+::-moz-selection,
+::selection {
+	background: var(--accent);
+	color: var(--bg);
+	text-shadow: none;
 }
 
 html {
+	box-sizing: border-box;
 	/* Preventing layout shift from scrollbar appearance */
 	scrollbar-gutter: stable;
 }
@@ -331,9 +348,10 @@ body {
 	margin: 40px auto 0;
 	padding: 0 20px 8px;
 	max-width: 920px;
+	font-size: 0.8rem;
 
 	hr {
-		border-width: 0.5px;
+		border-width: 0.4px;
 		color: var(--muted);
 	}
 
@@ -341,7 +359,6 @@ body {
 	.footer-thanks {
 		margin: 0.25rem 0 0;
 		color: var(--muted);
-		font-size: 0.9rem;
 		text-align: center;
 		text-wrap: balance;
 	}

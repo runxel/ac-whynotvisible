@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <style>
+    	:root { --accent: #2f6fed; --glyph: #ffffff; }
+    	@media (prefers-color-scheme: dark) {
+    		:root { --accent: #5b8cff; --glyph: #15171b; }
+    	}
+    </style>
+    <rect width="32" height="32" rx="7" style="fill:var(--accent);"/>
+    <path d="M16,11C21.4,11 25.4,14.1 26.9,16.5C25.4,18.9 21.4,22 16,22C10.6,22 6.6,18.9 5.1,16.5C6.6,14.1 10.6,11 16,11Z" style="fill:var(--glyph);"/>
+    <path d="M7.5,24.5L24.5,8.5" style="fill:none;stroke:var(--accent);stroke-width:6.5px;stroke-linecap:round;"/>
+    <path d="M7.5,24.5L24.5,8.5" style="fill:none;stroke:var(--glyph);stroke-width:3px;stroke-linecap:round;"/>
+</svg>

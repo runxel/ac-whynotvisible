@@ -1,14 +1,20 @@
 import type { I18nText, Lang } from './types';
 
-export const LANGS: Lang[] = ['de', 'en'];
+export const LANGS: Lang[] = ['de', 'en', 'fr'];
 export const DEFAULT_LANG: Lang = 'de';
 
 const STORAGE_KEY = 'lang';
 
-/** Liefert den Text in der gewünschten Sprache, mit Fallback auf de. */
+/**
+ * Liefert den Text in der gewünschten Sprache, mit Fallback auf de.
+ * Ein leerer Wert (`fr: ""`, angelegt aber noch nicht übersetzt) zählt als
+ * fehlend – sonst stünde in der Oberfläche eine leere Zeile statt des Fallbacks.
+ */
 export function t(text: I18nText | undefined, lang: Lang): string {
   if (!text) return '';
-  return text[lang] ?? text.de ?? '';
+  const value = text[lang];
+  if (value && value.trim()) return value;
+  return text.de ?? '';
 }
 
 function isLang(value: string | null | undefined): value is Lang {

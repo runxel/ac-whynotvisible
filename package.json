@@ -9,6 +9,7 @@
         "build": "npm run validate && tsc --noEmit && vite build",
         "preview": "vite preview",
         "validate": "node scripts/validate-data.mjs",
+        "i18n-status": "node scripts/i18n-status.mjs",
         "theme-icons": "node scripts/theme-icons.mjs"
     },
     "devDependencies": {

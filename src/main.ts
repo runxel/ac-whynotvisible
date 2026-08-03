@@ -18,6 +18,8 @@ const viewLabelEl = $<HTMLLabelElement>('#view-label');
 const resultsHeadingEl = $<HTMLHeadingElement>('#results-heading');
 const resultsBodyEl = $<HTMLDivElement>('#results-body');
 const langSelect = $<HTMLSelectElement>('#lang-select');
+const madebyEl = $<HTMLParagraphElement>('#footer-madeby');
+const thanksEl = $<HTMLParagraphElement>('#footer-thanks');
 
 // ---- abgehakte Gründe pro (Element × Sicht) in localStorage ----------------
 function struckKey(): string {
@@ -48,6 +50,8 @@ function renderStaticText(): void {
   whatLabelEl.textContent = t(ui.what_label, lang);
   viewLabelEl.textContent = t(ui.view_label, lang);
   resultsHeadingEl.textContent = t(ui.results_heading, lang);
+  thanksEl.textContent = t(ui.thanks, lang);
+  madebyEl.textContent = t(ui.madeby, lang);
   langSelect.value = lang;
 }
 

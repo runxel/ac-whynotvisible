@@ -1,4 +1,4 @@
-export type Lang = 'de' | 'en';
+export type Lang = 'de' | 'en' | 'fr';
 
 /** Inline übersetzbarer Text. `de` ist Pflicht und dient als Fallback. */
 export type I18nText = { de: string } & Partial<Record<Lang, string>>;

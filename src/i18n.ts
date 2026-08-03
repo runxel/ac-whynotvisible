@@ -3,6 +3,9 @@ import type { I18nText, Lang } from './types';
 export const LANGS: Lang[] = ['de', 'en', 'fr'];
 export const DEFAULT_LANG: Lang = 'de';
 
+/** URL-Parameter für die Sprache, z. B. ?lang=en. */
+export const LANG_PARAM = 'lang';
+
 const STORAGE_KEY = 'lang';
 
 /**
@@ -36,7 +39,7 @@ function detectBrowserLang(): Lang | null {
  * (localStorage) > Browsersprache > Default. So bleibt eine bewusste Wahl erhalten.
  */
 export function initLang(): Lang {
-  const fromUrl = new URLSearchParams(location.search).get('lang');
+  const fromUrl = new URLSearchParams(location.search).get(LANG_PARAM);
   if (isLang(fromUrl)) return fromUrl;
 
   const fromStore = localStorage.getItem(STORAGE_KEY);

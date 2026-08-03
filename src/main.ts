@@ -2,12 +2,47 @@ import './styles.css';
 import { elements, reasons, ui, views } from './data';
 import { Combobox } from './combobox';
 import { selectReasons } from './reasons';
-import { initLang, persistLang, t } from './i18n';
-import type { Lang } from './types';
+import { LANG_PARAM, initLang, persistLang, t } from './i18n';
+import type { Item, Lang } from './types';
 
 let lang: Lang = initLang();
-let elementId: string | null = null;
-let viewId: string | null = null;
+
+// ---- Verlinkbarer Zustand: ?element=…&view=… -------------------------------
+const ELEMENT_PARAM = 'element';
+const VIEW_PARAM = 'view';
+
+/** Liest eine id aus der URL, aber nur wenn es sie in den Daten wirklich gibt. */
+function idFromUrl(param: string, items: Item[]): string | null {
+  const id = new URLSearchParams(location.search).get(param);
+  return id && items.some((it) => it.id === id) ? id : null;
+}
+
+/**
+ * Schreibt die aktuelle Auswahl in die Adresszeile, damit ein Ergebnis
+ * verlinkbar ist. Bewusst replaceState statt pushState: Jede Auswahl würde
+ * sonst einen History-Eintrag erzeugen und den Zurück-Button unbrauchbar machen.
+ */
+function syncUrl(): void {
+  const url = new URL(location.href);
+  const params = url.searchParams;
+
+  for (const [key, value] of [
+    [ELEMENT_PARAM, elementId],
+    [VIEW_PARAM, viewId],
+  ] as const) {
+    if (value) params.set(key, value);
+    else params.delete(key);
+  }
+
+  // ?lang= nur nachziehen, wenn es ohnehin schon im Link steht. Ungefragt
+  // hinzugefügt würde ein geteilter Link die Sprachwahl des Empfängers überfahren.
+  if (params.has(LANG_PARAM)) params.set(LANG_PARAM, lang);
+
+  history.replaceState(null, '', url);
+}
+
+let elementId: string | null = idFromUrl(ELEMENT_PARAM, elements);
+let viewId: string | null = idFromUrl(VIEW_PARAM, views);
 
 const $ = <T extends Element>(sel: string): T => document.querySelector<T>(sel)!;
 
@@ -130,8 +165,10 @@ const comboWhat = new Combobox({
   toggleLabel: t(ui.toggle_aria, lang),
   inputId: 'combo-what-input',
   iconDir: 'tools',
+  value: elementId,
   onSelect: (id) => {
     elementId = id;
+    syncUrl();
     renderResults();
   },
 });
@@ -143,8 +180,10 @@ const comboView = new Combobox({
   placeholder: t(ui.view_placeholder, lang),
   toggleLabel: t(ui.toggle_aria, lang),
   inputId: 'combo-view-input',
+  value: viewId,
   onSelect: (id) => {
     viewId = id;
+    syncUrl();
     renderResults();
   },
 });
@@ -152,10 +191,12 @@ const comboView = new Combobox({
 langSelect.addEventListener('change', () => {
   lang = langSelect.value as Lang;
   persistLang(lang);
+  syncUrl();
   renderStaticText();
   comboWhat.setLang(lang, t(ui.what_placeholder, lang), t(ui.toggle_aria, lang));
   comboView.setLang(lang, t(ui.view_placeholder, lang), t(ui.toggle_aria, lang));
   renderResults();
 });
 
+syncUrl(); // räumt unbekannte ids aus einem geteilten Link wieder aus der Adresszeile
 renderResults();

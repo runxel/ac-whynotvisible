@@ -18,6 +18,8 @@ export interface ComboboxOptions {
   inputId: string;
   /** Unterordner der Icons unterhalb von public/icons/, z. B. 'tools'. Ohne Angabe: direkt in icons/. */
   iconDir?: string;
+  /** Vorauswahl beim Erzeugen (z. B. aus der URL). Unbekannte ids werden ignoriert, onSelect löst nicht aus. */
+  value?: string | null;
   /** Wird bei jeder Auswahl mit der gewählten id (oder null) aufgerufen. */
   onSelect: (id: string | null) => void;
 }
@@ -47,6 +49,7 @@ export class Combobox {
     this.onSelect = opts.onSelect;
     this.iconDir = opts.iconDir ? `${opts.iconDir.replace(/\/+$/, '')}/` : '';
     this.listId = `cb-list-${counter++}`;
+    this.selectedId = this.items.some((it) => it.id === opts.value) ? opts.value! : null;
 
     this.root = document.createElement('div');
     this.root.className = 'cb';
@@ -89,6 +92,7 @@ export class Combobox {
     opts.container.append(this.root);
 
     this.attachEvents();
+    this.restoreInputText(); // zeigt eine Vorauswahl aus opts.value an
   }
 
   private attachEvents(): void {

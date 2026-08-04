@@ -99,15 +99,26 @@
     en: Document → Floor Plan Cut Plane. Very tall/low elements may not be cut otherwise.
 
 - id: mvo-elementtype
-  elements: "*"
+  elements: ["window", "door", "opening", "railing", "stair"]
   views: [2d, section, elevation]
   rating: 5
   title:
     de: Modellansichts-Optionen blenden den Elementtyp aus
     en: Model View Options hide this element type
   comment:
+    de: Dokument → Modellansichts-Optionen prüfen.
+    en: Check Document → Model View Options.
+
+- id: mvo-elementtype-2d
+  elements: "beam"
+  views: [2d]
+  rating: 5
+  title:
+    de: Modellansichts-Optionen blenden den Elementtyp aus
+    en: Model View Options hide this element type
+  comment:
     de: Dokument → Modellansichts-Optionen prüfen (z.B. Schraffuren/Bemaßungen/Bauteile deaktiviert).
-    en: Document → Model View Options (e.g. fills/dimensions/components turned off).
+    en: Check Document → Model View Options (e.g. fills/dimensions/components turned off).
 
 - id: display-order
   elements: [fill, object]

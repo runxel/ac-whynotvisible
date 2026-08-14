@@ -280,7 +280,7 @@
     de: Innenansichtsoption 'Umgebenen Bereich hinzufügen'
     en: Interior Elevation setting 'Add Bounded Areas'
   comment:
-    de: 'Innenansichten verfügen in im Einstellungsdialog über eine besondere Funktion mit dem wenig deskriptiven Namen "Umgebenen Bereich hinzufügen". Ist dieser aktiv, werden bestimmte Wände ausgeblendet; das passiert jedoch teils erratisch.'
+    de: 'Innenansichten verfügen im Einstellungsdialog über eine besondere Funktion mit dem wenig deskriptiven Namen "Umgebenen Bereich hinzufügen". Ist dieser aktiv, werden bestimmte Wände ausgeblendet; das passiert jedoch teils erratisch.'
     en: 'Interior Elevations have an ominous checkbox called "Add Bounded Areas" (only available before placing). When active walls are hidden. It is not entirely clear on what basis.'
   link:
     https://help.graphisoft.com/AC/29/GER/index.htm?rhcsh=1&rhnewwnd=0#t=_AC29_Help%2F150_UserInterfaceToolSettings%2F150_UserInterfaceToolSettings-34.htm#CSH_2208

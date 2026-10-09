@@ -470,7 +470,7 @@
     en: Different Display in 2D vs 3D
   comment:
     de: 'Objekte können unterschiedliche Einstellungen je nach Sicht aufweisen.'
-    en: 'Depending on the view the Object's settings there can be set different.'
+    en: "Objects can have different settings depending on the view."
 
 - id: wido-2d-projection
   elements: [window, door]

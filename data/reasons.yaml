@@ -469,8 +469,8 @@
     de: Darstellung im 2D/3D unterschiedlich
     en: Different Display in 2D vs 3D
   comment:
-    de: Objekte können unterschiedliche Einstellungen je nach Sicht aufweisen.
-    en: Depending on the view the Object's settings there can be set different.
+    de: 'Objekte können unterschiedliche Einstellungen je nach Sicht aufweisen.'
+    en: 'Depending on the view the Object's settings there can be set different.'
 
 - id: wido-2d-projection
   elements: [window, door]
@@ -480,8 +480,8 @@
     de: "Grundriss projiziert/symbolisch <-> CP Ebene"
     en: Floor plan projection
   comment:
-    de: Fenster oder Tür sind auf "Projiziert" / "Projiziert mit Untersicht" eingestellt und die aktuelle Schnittebene schneidet das Element nicht.
-    en: The floor plan projection of the Window/Door is set to "Projected" or "Projected with overhead" and the FPCP does not cut the Window/Door.
+    de: 'Fenster oder Tür sind auf "Projiziert" / "Projiziert mit Untersicht" eingestellt und die aktuelle Schnittebene schneidet das Element nicht.'
+    en: 'The floor plan projection of the Window/Door is set to "Projected" or "Projected with overhead" and the FPCP does not cut the Window/Door.'
 
 - id: morph-proj
   elements: morph
@@ -493,3 +493,26 @@
   comment:
     de: 'Die Projektion von Morphs aus anderen Geschossen verhält sich trotz gleicher Einstellungen anders als bei anderen Elementen. Der Trick ist, die generelle Anzeige von Morphs erst einmal auf "alle Geschosse" statt "alle relevante Geschosse" umzustellen, und über den Grundrissbereich die Darstellung zu gewährleisten.'
     en: 'Projected morphs situated at a different story are behaving differently than other elements. Try to set the floor plan display to "all stories" instead of "all relevant stories". Then use the FPCP to ensure a consistent display.'
+
+- id: mesh-geom-bug
+  elements: mesh
+  views: [3d, section, elevation]
+  rating: 10
+  title:
+    de: Freiflächengeometrie verstümmelt
+    en: Mesh geometry broken
+  comment:
+    de: 'Bestimmte Geometrien, wie vor allem spitze Winkel die durch konkave Ausrundungen entstehen, können nicht fehlerfrei dargestellt werden. Betroffene Freiflächen sind erst gar nicht sichtbar. Über den Befehl "Splitten" kann man versuchen, Teilflächen zu isolieren.'
+    en: 'In certain circumstances the geometry of the Mesh is not valid. Use the "split" command to identify the region.'
+  link: https://support.graphisoft.com/hc/de/articles/26064334929553-Freifl%C3%A4che-im-3D-nicht-sichtbar
+    
+- id: mesh-no-volume
+  elements: mesh
+  views: [section, elevation]
+  rating: 2
+  title:
+    de: Freifläche ohne Volumen
+    en: Mesh has no volume
+  comment:
+    de: 'Die Freifläche ist im nicht im Modus "Massivkörper" erstelt worden, somit ist im 3D kein Volumenkörper zu sehen. Elemente ohne Volumen können auch auf SEO nicht reagieren. Ändere die Struktur, um ein vollständiges 3D-Modell zusehen.'
+    en: 'The Mesh is not a solid body resulting in only the top surface or skirts being shown. Change the structure to solid.'

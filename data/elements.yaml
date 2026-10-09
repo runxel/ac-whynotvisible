@@ -23,6 +23,9 @@
 - id: morph
   icon: morph.svg
   label: { de: Morph, en: Morph }
+- id: mesh
+  icon: mesh.svg
+  label: { de: Freifläche, en: Mesh }
 - id: object
   icon: object.svg
   label: { de: Objekt, en: Object }

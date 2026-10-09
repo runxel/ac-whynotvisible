@@ -21,6 +21,8 @@ npm run dev      # Dev-Server with hot-reload
 npm run build    # local build
 ```
 
+Check with `npm run validate` before committing.  
+
 ### Contents (`data/`)
 
 All contents are in the YAML files inside `data/`. On building these will be baked in.  

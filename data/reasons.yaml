@@ -22,7 +22,7 @@
     en: Layouts can't have Layer Combinations assigned, use the Archicad-Layer instead.
 
 - id: psd
-  elements: ["*", "!fill", "!marker-wido"]
+  elements: ["*", "!fill", "!marker-wido", "!mesh"]
   views: [2d, 3d, section, elevation, export]
   rating: 3
   title:
@@ -87,13 +87,13 @@
     de: Schnitt-Einstellungen → „Begrenzt"/Tiefe prüfen; das Element liegt evtl. hinter der Begrenzung.
     en: Section settings → check "Limited" depth; the element may lie behind the boundary.
 
-- id: cut-plane
+- id: fpcp
   elements: [wall, column, object]
   views: [2d]
   rating: 6
   title:
     de: Element über/unter der Grundriss-Schnittebene
-    en: Element above/below the floor plan cut plane
+    en: Element above/below the Floor Plan Cut Plane
   comment:
     de: Dokument → Grundriss-Schnittebene anpassen. Sehr hohe/tiefe Elemente werden sonst nicht geschnitten.
     en: Document → Floor Plan Cut Plane. Very tall/low elements may not be cut otherwise.
@@ -216,17 +216,6 @@
   comment:
     de: Im 3D-Fenster ist ein 3D-Schnitt aktiv und begrenzt so das Angezeigte. Die Schnittebenen (dargestellt in Lila) können ausgeblendet werden, sodass der einzige Hinweis darauf ein am oberen Bildschirmrand befindliches Augensymbol ist.
     en: A 3D cutaway is active in the 3D window, limiting what is displayed. The cutting planes (shown in purple) can be hidden, so the only indication of an active 3D cut might be an eye icon located at the top of the screen.
-
-- id: fpcp
-  elements: ["*", "!fill", "!marker-change", "!marker-wido"]
-  views: 2d
-  rating: 5
-  title:
-    de: Grundriss-Schnittebene
-    en: Floor Plan Cut Plane
-  comment:
-    de: Die aktuellen Einstellungen der Grundriss-Schnittebene überprüfen.
-    en: Check the current settings of the Floor Plan Cut Plane dialog.
 
 - id: elemsett-plan
   elements: ["*", "!fill", "!marker-change", "!marker-wido"]

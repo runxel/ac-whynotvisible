@@ -231,6 +231,7 @@ body {
 	height: 1.25rem;
 	object-fit: contain;
 	flex: none;
+	scale: 155%;
 }
 
 .cb-empty {

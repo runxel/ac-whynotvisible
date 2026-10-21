@@ -41,7 +41,7 @@
     en: Renovation filter hides the element
   comment:
     de: "Aktuellen Umbau-Filter und den Umbau-Status des Elements (Bestand/Abbruch/Neu) prüfen; bei gehosteten Elementen auch den des Host-Elements (z.B. Fenster vs Wand). Auch gefährdet: Angepinnte Elemente, die so zwangsweise in nur einem bestimmten Umbau-Filter zu sehen sind."
-    en: Check the Renovation Filter and the element's status (Existing/Demolished/New). Hosted elements inherit the reno status of their host (e.g. wall in that a window is inserted into). Also check if elements are pinned to a disitinct reno filter.
+    en: Check the Renovation Filter and the element's status (Existing/Demolished/New). Hosted elements inherit the reno status of their host (e.g. wall in that a window is inserted into). Also check if elements are pinned to a distinct reno filter.
 
 - id: do
   elements: ["*", "!marker-wido"]
@@ -447,7 +447,7 @@
     de: 'Verbundene Etiketten "erben" die Sichtbarkeit des verknüpften Elements'
     en: Linked Labels inherit visibility of labeled element
   comment:
-    de: 'Bei verlinkten Etiketten gibt es in den Etiketteneinstellungen ganz unten die Checkbox "Mit assoziertem Element verbergen". Zusätzlich zu den Sichtbarkeitsgründen des Etiketts selbst kann also durch das verlinkte Element eine Ausblendung stattfinden.'
+    de: 'Bei verlinkten Etiketten gibt es in den Etiketteneinstellungen ganz unten die Checkbox "Mit assoziiertem Element verbergen". Zusätzlich zu den Sichtbarkeitsgründen des Etiketts selbst kann also durch das verlinkte Element eine Ausblendung stattfinden.'
     en: The option "hide with associated element" (activated by default) at the bottom of the Label settings dialog will make the visibility dependent on the labeled element.
   
 - id: object-sett-2d-3d
@@ -503,5 +503,5 @@
     de: Freifläche ohne Volumen
     en: Mesh has no volume
   comment:
-    de: 'Die Freifläche ist im nicht im Modus "Massivkörper" erstelt worden, somit ist im 3D kein Volumenkörper zu sehen. Elemente ohne Volumen können auch auf SEO nicht reagieren. Ändere die Struktur, um ein vollständiges 3D-Modell zusehen.'
+    de: 'Die Freifläche ist im nicht im Modus "Massivkörper" erstellt worden, somit ist im 3D kein Volumenkörper zu sehen. Elemente ohne Volumen können auch auf SEO nicht reagieren. Ändere die Struktur, um ein vollständiges 3D-Modell zusehen.'
     en: 'The Mesh is not a solid body resulting in only the top surface or skirts being shown. Change the structure to solid.'

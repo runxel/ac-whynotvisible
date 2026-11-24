@@ -304,7 +304,7 @@
     de: Darstellungsreihenfolge
     en: View Order
   comment:
-    de: 'Elemente können über die Darstellungsreihenfolge vollkommen durch andere Elemente verdeckt werden. Die Darstellungsreihenfolge kann auch global über einen Menübefehl "Voreingestelle Reihenfolge wiederherstellen" zurückgesetzt werden.'
+    de: 'Elemente können über die Darstellungsreihenfolge vollkommen durch andere Elemente verdeckt werden. Die Darstellungsreihenfolge kann auch global über einen Menübefehl "Voreingestellte Reihenfolge wiederherstellen" zurückgesetzt werden.'
     en: 'Elements can be completely concealed by other elements depending on their respective display order. The display order can also be reset globally using a "Restore default view order" menu command.'
   
 - id: empty-fill
@@ -403,7 +403,7 @@
     de: Objekt reagiert auf Kontext
     en: Object reacts to context
   comment:
-    de: "GDL-Objekte können auf ihren Ausführungskontext reagieren, indem z.B. eine andere Geometrie verwendet wird, wenn das Objekt Teil Für GDL-Tüftler: Früher `GLOB_CONTEXT`, jetzt `GLOB_VIEW_TYPE` / `GLOB_FEEDBACK_MODE` / `GLOB_SEO_TOOL_MODE`"
+    de: "GDL-Objekte können auf ihren Ausführungskontext reagieren, indem z.B. eine andere Geometrie verwendet wird, wenn das Objekt Teil einer Solid-Element-Operation ist. Für GDL-Tüftler: Früher `GLOB_CONTEXT`, jetzt aufgesplittet in `GLOB_VIEW_TYPE` / `GLOB_FEEDBACK_MODE` / `GLOB_SEO_TOOL_MODE`"
     en: GDL objects can react to their context, e.g. use a different geometry when they are part of a SEO action.
 
 - id: graphic-override
@@ -505,3 +505,14 @@
   comment:
     de: 'Die Freifläche ist im nicht im Modus "Massivkörper" erstellt worden, somit ist im 3D kein Volumenkörper zu sehen. Elemente ohne Volumen können auch auf SEO nicht reagieren. Ändere die Struktur, um ein vollständiges 3D-Modell zusehen.'
     en: 'The Mesh is not a solid body resulting in only the top surface or skirts being shown. Change the structure to solid.'
+  
+- id: walls-story-custom
+  elements: [wall]
+  views: 2d
+  rating: 7
+  title:
+    de: Auf keinem Geschoss sichtbar durch individuelle Darstellung
+    en: Shown on no Story because of Custom Settings
+  comment:
+    de: 'Unter "Geschossdarstellung" > "Auf Geschoss zeigen" ist "individuell" ausgewählt. In dem Subdialog ist keine Darstellung (darüber/Ursprung/darunter) angehakt, somit wird die Wnad nirgends angezeigt. (Seit AC 30 möglich – u.U. sind migrierte Dateien betroffen. Bei anderen Elementen kann nur die Schraffur ausgeblendet werden, der Umriss ist im Ursprungsgeschoss immer sichtbar.)'
+    en: 'At "Floor Plan Display" the "Show on Stories" setting can be set to "Custom". In that subdialog it is possible to uncheck all options (above/home story/below), resulting in the Wall being shown nowhere. (Since AC 30 – migrated files might show this. For other elements this option is not possible; only the fill can be hidden but the outline will always show in the home story.)'
